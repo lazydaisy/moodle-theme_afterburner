@@ -18,16 +18,16 @@
  * Theme version info
  *
  * @package    theme_afterburner
- * @copyright  2011 Mary Evans
+ * @copyright  2016 Mary Evans
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die;
 
-$plugin->version   = 2014041400; // The current module version (Date: YYYYMMDDXX)
-$plugin->requires  = 2014041101; // Requires this Moodle version
+$plugin->version   = 2016080900; // The current module version (Date: YYYYMMDDXX)
+$plugin->requires  = 2015111600; // Requires this Moodle version
 $plugin->component = 'theme_afterburner'; // Full name of the plugin (used for diagnostics).
 $plugin->maturity  = MATURITY_STABLE;
 $plugin->dependencies = array(
-    'theme_base'  => 2013110500,
+    'theme_base'  => 2015111600,
 );
