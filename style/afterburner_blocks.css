@@ -131,27 +131,7 @@ Block
 .block .list .c1 {
     margin-left:5px;display:inline;
 }
-/** Bugfixes Smallicon & Navicon **/
-.block_settings .block_tree li.item_with_icon > p img,
-.block_navigation .block_tree li.item_with_icon > p img {
-    left:0;
-    position:absolute;
-    top:0px !important;
-    vertical-align:middle;
-}
-.block_settings .block_tree li.item_with_icon p img.smallicon,
-.block_settings .block_tree li.item_with_icon p img.navicon,
-.block_navigation .block_tree li.item_with_icon p img.smallicon,
-.block_navigation .block_tree li.item_with_icon p img.navicon {
-    margin: 0;
-    padding: 0;
-    vertical-align:middle;
-}
-.block_navigation .block_tree .type_activity > .tree_item.branch img {
-    left:0px;
-    bottom: 0px;
-    position:absolute;
-}
+
 /* COMMAND ICONS
 -----------------------*/
 img.iconsmall,
