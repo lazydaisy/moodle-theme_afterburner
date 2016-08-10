@@ -65,7 +65,7 @@ $THEME->layouts = array(
         'file' => 'default.php',
         'regions' => array('side-pre', 'side-post'),
         'defaultregion' => 'side-pre',
-        'options' => array('langmenu'=>true),
+        'options' => array('langmenu' => true),
     ),
     'coursecategory' => array(
         'file' => 'default.php',
@@ -83,7 +83,7 @@ $THEME->layouts = array(
         'file' => 'default.php',
         'regions' => array('side-pre', 'side-post'),
         'defaultregion' => 'side-pre',
-        'options' => array('langmenu'=>true),
+        'options' => array('langmenu' => true),
     ),
     // Server administration scripts.
     'admin' => array(
@@ -96,7 +96,7 @@ $THEME->layouts = array(
         'file' => 'default.php',
         'regions' => array('side-post'),
         'defaultregion' => 'side-post',
-        'options' => array('langmenu'=>true),
+        'options' => array('langmenu' => true),
     ),
     // My public page.
     'mypublic' => array(
@@ -107,20 +107,20 @@ $THEME->layouts = array(
     'login' => array(
         'file' => 'default.php',
         'regions' => array(),
-        'options' => array('langmenu'=>true),
+        'options' => array('langmenu' => true),
     ),
 
     // Pages that appear in pop-up windows - no navigation, no blocks, no header.
     'popup' => array(
         'file' => 'default.php',
         'regions' => array(),
-        'options' => array('nofooter'=>true, 'nonavbar'=>true, 'nocustommenu'=>true, 'nologininfo'=>true, 'nocourseheaderfooter'=>true),
+        'options' => array('nofooter' => true, 'nonavbar' => true, 'nocustommenu' => true, 'nologininfo' => true, 'nocourseheaderfooter' => true),
     ),
     // No blocks and minimal footer - used for legacy frame layouts only!
     'frametop' => array(
         'file' => 'default.php',
         'regions' => array(),
-        'options' => array('nofooter'=>true, 'nocoursefooter'=>true),
+        'options' => array('nofooter' => true, 'nocoursefooter' => true),
     ),
     // Embedded pages, like iframe/object embeded in moodleform - it needs as much space as possible.
     'embedded' => array(
@@ -133,13 +133,13 @@ $THEME->layouts = array(
     'maintenance' => array(
         'file' => 'default.php',
         'regions' => array(),
-        'options' => array('noblocks'=>true, 'nofooter'=>true, 'nonavbar'=>true, 'nocustommenu'=>true, 'nocourseheaderfooter'=>true),
+        'options' => array('noblocks' => true, 'nofooter' => true, 'nonavbar' => true, 'nocustommenu' => true, 'nocourseheaderfooter' => true),
     ),
     // Should display the content and basic headers only.
     'print' => array(
         'file' => 'default.php',
         'regions' => array(),
-        'options' => array('noblocks'=>true, 'nofooter'=>true, 'nonavbar'=>false, 'nocustommenu'=>true, 'nocourseheaderfooter'=>true),
+        'options' => array('noblocks' => true, 'nofooter' => true, 'nonavbar' => false, 'nocustommenu' => true, 'nocourseheaderfooter' => true),
     ),
     // The pagelayout used when a redirection is occuring.
     'redirect' => array(
@@ -157,7 +157,7 @@ $THEME->layouts = array(
         'file' => 'default.php',
         'regions' => array('side-pre', 'side-post'),
         'defaultregion' => 'side-pre',
-        'options' => array('nofooter'=>true, 'nonavbar'=>true, 'nocustommenu'=>true, 'nologinlinks'=>true, 'nocourseheaderfooter'=>true),
+        'options' => array('nofooter' => true, 'nonavbar' => true, 'nocustommenu' => true, 'nologinlinks' => true, 'nocourseheaderfooter' => true),
     ),
 );
 

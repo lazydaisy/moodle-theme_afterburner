@@ -50,7 +50,7 @@ function xmldb_theme_afterburner_upgrade($oldversion) {
                 $fs = get_file_storage();
                 $record = array(
                     'contextid' => context_system::instance()->id, 'component' => 'theme_afterburner',
-                    'filearea' => 'logo', 'itemid'=>0, 'filepath'=>'/', 'filename'=>$filename);
+                    'filearea' => 'logo', 'itemid' => 0, 'filepath' => '/', 'filename' => $filename);
                 $fs->create_file_from_string($record, $content);
                 set_config('logo', '/'.$filename, 'theme_afterburner');
                 unset($content);

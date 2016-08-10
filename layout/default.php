@@ -102,61 +102,57 @@ echo $OUTPUT->doctype() ?>
                 <div id="custommenu" class="javascript-disabled"><?php echo $custommenu; ?></div>
         <?php } ?>
 
-    </div>
+    </div><?php
 
-        <?php if (!empty($courseheader)) { ?>
-            <div id="course-header"><?php echo $courseheader; ?></div>
-        <?php } ?>
-
-        <?php if ($hasnavbar) { ?>
-            <div class="navbar clearfix">
-                <div class="breadcrumb"><?php echo $OUTPUT->navbar(); ?></div>
-                <div class="navbutton"> <?php echo $PAGE->button; ?></div>
-            </div>
-        <?php } ?>
+    if (!empty($courseheader)) { ?>
+        <div id="course-header"><?php echo $courseheader; ?></div><?php
+    }
+    if ($hasnavbar) { ?>
+        <div class="navbar clearfix">
+            <div class="breadcrumb"><?php echo $OUTPUT->navbar(); ?></div>
+            <div class="navbutton"> <?php echo $PAGE->button; ?></div>
+        </div><?php
+    } ?>
 
 <!-- END OF CUSTOMMENU AND NAVBAR -->
-    <div id="page-content">
-       <div id="region-main-box">
-           <div id="region-pre-box">
-               <div id="region-main">
-                   <div class="region-content">
-                       <?php echo $coursecontentheader; ?>
-                       <?php echo $OUTPUT->main_content() ?>
-                       <?php echo $coursecontentfooter; ?>
-                   </div>
-               </div>
+<div id="page-content">
+    <div id="region-main-box">
+        <div id="region-pre-box">
+            <div id="region-main">
+                <div class="region-content"><?php
+                    echo $coursecontentheader;
+                    echo $OUTPUT->main_content();
+                    echo $coursecontentfooter; ?>
+                 </div>
+            </div><?php
 
-               <?php if ($hassidepre OR (right_to_left() AND $hassidepost)) { ?>
-               <div id="region-pre" class="block-region">
-                   <div class="region-content">
-                           <?php
-                       if (!right_to_left()) {
-                           echo $OUTPUT->blocks_for_region('side-pre');
-                       } elseif ($hassidepost) {
-                           echo $OUTPUT->blocks_for_region('side-post');
-                   } ?>
+            if ($hassidepre OR (right_to_left() AND $hassidepost)) { ?>
+                <div id="region-pre" class="block-region">
+                <div class="region-content"><?php
+                if (!right_to_left()) {
+                    echo $OUTPUT->blocks_for_region('side-pre');
+                } else if ($hassidepost) {
+                    echo $OUTPUT->blocks_for_region('side-post');
+                } ?>
+                </div>
+                </div><?php
+            }
 
-                   </div>
-               </div>
-               <?php } ?>
+            if ($hassidepost OR (right_to_left() AND $hassidepre)) { ?>
+                <div id="region-post" class="block-region">
+                <div class="region-content"><?php
+                if (!right_to_left()) {
+                    echo $OUTPUT->blocks_for_region('side-post');
+                } else if ($hassidepre) {
+                    echo $OUTPUT->blocks_for_region('side-pre');
+                } ?>
+                </div>
+                </div><?php
+            } ?>
 
-               <?php if ($hassidepost OR (right_to_left() AND $hassidepre)) { ?>
-               <div id="region-post" class="block-region">
-                   <div class="region-content">
-                          <?php
-                      if (!right_to_left()) {
-                          echo $OUTPUT->blocks_for_region('side-post');
-                      } elseif ($hassidepre) {
-                          echo $OUTPUT->blocks_for_region('side-pre');
-                   } ?>
-                   </div>
-               </div>
-               <?php } ?>
-
-            </div>
         </div>
     </div>
+</div>
 
     <!-- START OF FOOTER -->
     <?php if (!empty($coursefooter)) { ?>
@@ -172,7 +168,7 @@ echo $OUTPUT->doctype() ?>
             <?php } ?>
 
             <a href="http://moodle.org" title="Moodle">
-                <img src="<?php echo $OUTPUT->pix_url('footer/moodle-logo','theme')?>" alt="Moodle logo" />
+                <img src="<?php echo $OUTPUT->pix_url('footer/moodle-logo', 'theme')?>" alt="Moodle logo" />
             </a>
         </div>
 
