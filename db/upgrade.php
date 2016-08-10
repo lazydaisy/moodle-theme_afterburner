@@ -36,10 +36,7 @@ function xmldb_theme_afterburner_upgrade($oldversion) {
     if ($oldversion < 2013041200) {
         // Migrate logo URL.
         $logo = get_config('theme_afterburner', 'logo');
-        if ($logo === '') {
-            // No logo means nothing to do.
-
-        } else if ($logo = clean_param($logo, PARAM_URL)) {
+        if ($logo = clean_param($logo, PARAM_URL)) {
             require_once("$CFG->libdir/filelib.php");
             if ($content = download_file_content($logo)) {
                 $filename = preg_replace('/^.*\//', '', $logo);
